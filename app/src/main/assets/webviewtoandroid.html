@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+<div style="display: flex;
+  flex-direction: column;  align-items: center;">
+    <h1>Webview</h1>
+    <p id="myText"></p>
+    <input type="text" id="myInput" style="width: 80%;
+    font-size: large;">
+    <button style="margin: 20px;     margin: 20px;
+    width: 80%;
+    padding: 10px;
+    border-radius: 40px;
+    background: #632e45;
+    color: white;" onclick="sendDataToAndroid()">Enviar</button>
+</div>
+
+
+<script>
+        window.androidObj = function AndroidClass() {};
+
+        function sendDataToAndroid() {
+            window.androidObj.textToAndroid(document.getElementById("myInput").value);
+            }
+
+            function updateTextToWeb(message) {
+                document.getElementById("myText").innerHTML = message;
+            }
+    </script>
+</body>
+
+</html>
